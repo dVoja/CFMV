@@ -1,0 +1,253 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--
+<div style="height: 80vh;">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>CrossFit</span>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+
+        <button class="btn-top-menu" mat-button routerLink="/home">Home</button>
+
+
+        <button class="btn-top-menu" mat-button routerLink="/our-coaches">Our Coaches!</button>
+
+        <button class="btn-top-menu" mat-button  [matMenuTriggerFor]="FAQ"  routerLink="/what-is-crossfit">What is CrossFit</button>
+
+        <mat-menu #FAQ="matMenu">
+          <button class="btn-top-menu"mat-menu-item routerLink="/crossfit-faq">CrossFit FAQ</button>
+          <button class="btn-top-menu" mat-menu-item [matMenuTriggerFor]="nutrition" routerLink="/nutrition">Nutrition</button>
+          <button class="btn-top-menu" mat-menu-item routerLink="/competition">Competition</button>
+
+        </mat-menu>
+
+        <mat-menu #nutrition="matMenu">
+          <button class="btn-top-menu" mat-menu-item routerLink="/nutrition-challange">Nutrition challange</button>
+        </mat-menu>
+
+        <button class="btn-top-menu" mat-button routerLink="/getting-started">Getting Started</button>
+
+
+        <button class="btn-top-menu" mat-button routerLink="/rates">Schedules & Rates</button>
+
+        <button class="btn-top-menu" mat-button routerLink="/kidfit">KidFit</button>
+
+        <button class="btn-top-menu" mat-button routerLink="/contact">Contact</button>
+
+
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <a href="" mat-list-item > </a>
+
+        <button class="btn-side-menu"  routerLink="/home"mat-list-item>Home</button>
+
+        <button class="btn-side-menu" routerLink="/our-coaches"mat-list-item>Our Coaches!</button>
+        <button class="btn-side-menu" [matMenuTriggerFor]="FAQ" routerLink="//what-is-crossfit"mat-list-item>What is CrossFit</button>
+        <mat-menu #FAQ="matMenu">
+          <button class="btn-side-menu" mat-menu-item routerLink="/crossfit-faq">CrossFit FAQ</button>
+          <button class="btn-side-menu" mat-menu-item [matMenuTriggerFor]="nutrition" routerLink="/nutrition">Nutrition</button>
+          <button class="btn-side-menu" mat-menu-item routerLink="/competition">Competition</button>
+        </mat-menu>
+
+        <mat-menu #nutrition="matMenu">
+          <button class="btn-side-menu" mat-menu-item routerLink="/nutrition-challange">Nutrition challange</button>
+        </mat-menu>
+
+        <button class="btn-side-menu" routerLink="/getting-started"mat-list-item>Getting Started</button>
+        <button class="btn-side-menu" routerLink="/rates"mat-list-item>Schedules & Rates</button>
+        <button class="btn-side-menu" routerLink="/kidfit"mat-list-item>Kid Fit</button>
+        <button class="btn-side-menu" routerLink="/contact"mat-list-item>Contact</button>
+
+
+
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+
+      Main content
+
+    <app-home>
+    </app-home>
+      <app-rates>
+      </app-rates>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
+-->
+
+<nav id="menu" class="navbar navbar-default fixed-top">
+  <div class = "container">
+    <div class = "navbar-header">
+      <a pageScroll class="navbar-brand page-scroll"  href="#page-top">CFMV</a>
+    </div>
+    <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <div fxShow="true" fxHide.lt-md>
+
+      <ul class = "nav nav-pills navbar-right">
+        <li>
+          <a pageScroll href="#home" class="btn-top-page" mat-button >Home123</a>
+        </li>
+
+        <li>
+          <a pageScroll href="#home" class="page-scroll" mat-button >Our Coaches!</a>
+        </li>
+
+        <li>
+          <a pageScroll href="#home" class="page-scroll" [matMenuTriggerFor]="FAQ" mat-button >CrossFit FAQ</a>
+        </li>
+
+        <mat-menu #FAQ="matMenu">
+          <li>
+            <a pageScroll href="#home" class="page-scroll" mat-menu-item >>What is CrossFit</a>
+          </li>
+          <li>
+            <a pageScroll href="#home" class="page-scroll" [matMenuTriggerFor]="nutrition" mat-menu-item >Nutrition</a>
+          </li>
+          <li>
+            <a pageScroll href="#home" class="page-scroll"  mat-menu-item >Competition</a>
+          </li>
+
+        </mat-menu>
+
+
+        <mat-menu #nutrition="matMenu">
+          <li>
+            <a pageScroll href="#home" class="page-scroll"  mat-menu-item >Nutrition challange</a>
+          </li>
+
+        </mat-menu>
+
+        <li>
+          <a pageScroll href="#home" class="page-scroll" mat-button >Getting Started</a>
+        </li>
+        <li>
+          <a pageScroll href="#home" class="page-scroll" mat-button >Schedules & Rates</a>
+        </li>
+        <li>
+          <a pageScroll href="#home" class="page-scroll" mat-button >KidFit</a>
+        </li>
+        <li>
+          <a pageScroll href="#team" class="page-scroll" mat-button >Contact</a>
+        </li>
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a href="" mat-list-item > </a>
+
+      <a class="btn-side-menu"  href="#home" mat-list-item>Home</a>
+
+      <a class="btn-side-menu" routerLink="/our-coaches"mat-list-item>Our Coaches!</a>
+      <a class="btn-side-menu" [matMenuTriggerFor]="FAQ" routerLink="//what-is-crossfit"mat-list-item>What is CrossFit</a>
+      <mat-menu #FAQ="matMenu">
+        <a class="btn-side-menu" mat-menu-item routerLink="/crossfit-faq">CrossFit FAQ</a>
+        <a class="btn-side-menu" mat-menu-item [matMenuTriggerFor]="nutrition" routerLink="/nutrition">Nutrition</a>
+        <a class="btn-side-menu" mat-menu-item routerLink="/competition">Competition</a>
+      </mat-menu>
+
+      <mat-menu #nutrition="matMenu">
+        <a class="btn-side-menu" mat-menu-item routerLink="/nutrition-challange">Nutrition challange</a>
+      </mat-menu>
+
+      <a class="btn-side-menu" routerLink="/getting-started"mat-list-item>Getting Started</a>
+      <a class="btn-side-menu" routerLink="/rates"mat-list-item>Schedules & Rates</a>
+      <a class="btn-side-menu" routerLink="/kidfit"mat-list-item>Kid Fit</a>
+      <a class="btn-side-menu" href="#contact"mat-list-item>Contact</a>
+
+
+
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>
+
+<div id="page-top">
+</div>
+<div id="home">
+  <app-home>
+  </app-home>
+</div>
+
+
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6"> <img src="../assets/bl.jpg" class="img-responsive" alt=""> </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>We enable you to leave all your worries about payments or subscriptions on
+            your website or some other form of your payed service to us.
+            We offer you multiple of most popular modern payment types.
+            You can choose which ones you want and you can enable or disable them at your will.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="services" class="text-center">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>We offer a great variety of payment options for you to choose.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <i class="fa fa-paypal"></i>
+        <div class="service-desc">
+          <h3>PayPal</h3>
+          <p>Integrated PayPal Api allows your customers to pay either with their their PayPal accound or
+            Credit Card through PayPal.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <i class="fa fa-bitcoin"></i>
+        <div class="service-desc">
+          <h3>Bitcoin</h3>
+          <p>Integrated Coingate Api allows your customers to pay through their cryptocurrency wallet.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <i class="fa fa-credit-card"></i>
+        <div class="service-desc">
+          <h3>Credit card</h3>
+          <p>Standard Credit Card payment. Your customers will be redirected to the bank webisite.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="contact">
+<app-contact>
+
+</app-contact>
+</div>
+
+
