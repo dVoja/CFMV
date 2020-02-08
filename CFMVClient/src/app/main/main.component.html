@@ -102,12 +102,9 @@
 
       <ul class = "nav nav-pills navbar-right">
         <li>
-          <a pageScroll href="#home" class="btn-top-page" mat-button >Home123</a>
+          <a pageScroll href="#home" class="btn-top-page" mat-button >Home</a>
         </li>
 
-        <li>
-          <a pageScroll href="#home" class="page-scroll" mat-button >Our Coaches!</a>
-        </li>
 
         <li>
           <a pageScroll href="#home" class="page-scroll" [matMenuTriggerFor]="FAQ" mat-button >CrossFit FAQ</a>
@@ -141,7 +138,7 @@
           <a pageScroll href="#home" class="page-scroll" mat-button >Schedules & Rates</a>
         </li>
         <li>
-          <a pageScroll href="#home" class="page-scroll" mat-button >KidFit</a>
+          <a pageScroll href="#" class="page-scroll" mat-button routerLink="/kidfit" (click)="linkToOtherComponent()">KidFit</a>
         </li>
         <li>
           <a pageScroll href="#team" class="page-scroll" mat-button >Contact</a>
@@ -161,8 +158,6 @@
       <a href="" mat-list-item > </a>
 
       <a class="btn-side-menu"  href="#home" mat-list-item>Home</a>
-
-      <a class="btn-side-menu" routerLink="/our-coaches"mat-list-item>Our Coaches!</a>
       <a class="btn-side-menu" [matMenuTriggerFor]="FAQ" routerLink="//what-is-crossfit"mat-list-item>What is CrossFit</a>
       <mat-menu #FAQ="matMenu">
         <a class="btn-side-menu" mat-menu-item routerLink="/crossfit-faq">CrossFit FAQ</a>
@@ -183,71 +178,36 @@
 
     </mat-nav-list>
   </mat-sidenav>
+
+
+<div id="main-content" *ngIf="mainContent;else other_component"  >
+  <div id="page-top">
+  </div>
+  <div id="home">
+    <app-home>
+    </app-home>
+  </div>
+  <!--
+  <div id="our-coaches">
+    <app-our-coaches>
+    </app-our-coaches>
+  </div>
+  -->
+  <div id="rates">
+    <app-rates>
+    </app-rates>
+  </div>
+
+  <div id="contact">
+  <app-contact>
+  </app-contact>
+  </div>
+</div>
+
+
+<ng-template #other_component>
+ <router-outlet>
+ </router-outlet>
+</ng-template>
+
 </mat-sidenav-container>
-
-<div id="page-top">
-</div>
-<div id="home">
-  <app-home>
-  </app-home>
-</div>
-
-
-<div id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-6"> <img src="../assets/bl.jpg" class="img-responsive" alt=""> </div>
-      <div class="col-xs-12 col-md-6">
-        <div class="about-text">
-          <h2>About Us</h2>
-          <p>We enable you to leave all your worries about payments or subscriptions on
-            your website or some other form of your payed service to us.
-            We offer you multiple of most popular modern payment types.
-            You can choose which ones you want and you can enable or disable them at your will.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="services" class="text-center">
-  <div class="container">
-    <div class="section-title">
-      <h2>Our Services</h2>
-      <p>We offer a great variety of payment options for you to choose.</p>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <i class="fa fa-paypal"></i>
-        <div class="service-desc">
-          <h3>PayPal</h3>
-          <p>Integrated PayPal Api allows your customers to pay either with their their PayPal accound or
-            Credit Card through PayPal.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <i class="fa fa-bitcoin"></i>
-        <div class="service-desc">
-          <h3>Bitcoin</h3>
-          <p>Integrated Coingate Api allows your customers to pay through their cryptocurrency wallet.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <i class="fa fa-credit-card"></i>
-        <div class="service-desc">
-          <h3>Credit card</h3>
-          <p>Standard Credit Card payment. Your customers will be redirected to the bank webisite.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="contact">
-<app-contact>
-
-</app-contact>
-</div>
-
-

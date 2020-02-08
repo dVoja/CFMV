@@ -8,7 +8,11 @@ import {MatSidenav} from "@angular/material/sidenav";
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  mainContent : boolean; //true = main page
+  constructor() {
+    this.mainContent = true;
+
+  }
 
   ngOnInit() {
   }
@@ -21,10 +25,15 @@ export class MainComponent implements OnInit {
     // console.log('size changed.', event);
     this.innerWidth = window.innerWidth;
     console.log('size changed. => ' + this.innerWidth);
-    if(this.innerWidth >= 1201){
+    if(this.innerWidth >= 958){
       this.sidenav2.close();
     }
   }
 
+  linkToOtherComponent(){
+    this.mainContent= false;
+
+
+  }
   title = 'CFMVClient';
 }

@@ -24,6 +24,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatListModule} from "@angular/material/list";
 import { MainComponent } from './main/main.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { MainComponent } from './main/main.component';
     MatButtonModule,
     MatIconModule,
     MatListModule,
-
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
