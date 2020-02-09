@@ -4,8 +4,8 @@ export class Contact {
   public content: string;
   public firstName: string;
   public lastName: string;
-  public phoneNumber: number;
-  public deleted: boolean;
+  public phoneNumber: string;
+
 
   constructor() {
   }

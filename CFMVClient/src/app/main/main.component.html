@@ -102,23 +102,23 @@
 
       <ul class = "nav nav-pills navbar-right">
         <li>
-          <a pageScroll href="#home" class="btn-top-page" mat-button >Home</a>
+          <a pageScroll href="#home" class="btn-top-page animation" mat-button >Home</a>
         </li>
 
 
         <li>
-          <a pageScroll href="#home" class="page-scroll" [matMenuTriggerFor]="FAQ" mat-button >CrossFit FAQ</a>
+          <a pageScroll href="#home" class="btn-top-page animation " [matMenuTriggerFor]="FAQ" mat-button >CrossFit FAQ</a>
         </li>
 
         <mat-menu #FAQ="matMenu">
           <li>
-            <a pageScroll href="#home" class="page-scroll" mat-menu-item >>What is CrossFit</a>
+            <a pageScroll href="#home" class="btn-top-page animation" mat-menu-item >>What is CrossFit</a>
           </li>
           <li>
-            <a pageScroll href="#home" class="page-scroll" [matMenuTriggerFor]="nutrition" mat-menu-item >Nutrition</a>
+            <a pageScroll href="#home" class="btn-top-page animation" [matMenuTriggerFor]="nutrition" mat-menu-item >Nutrition</a>
           </li>
           <li>
-            <a pageScroll href="#home" class="page-scroll"  mat-menu-item >Competition</a>
+            <a pageScroll href="#home" class="btn-top-page animation"  mat-menu-item >Competition</a>
           </li>
 
         </mat-menu>
@@ -126,22 +126,22 @@
 
         <mat-menu #nutrition="matMenu">
           <li>
-            <a pageScroll href="#home" class="page-scroll"  mat-menu-item >Nutrition challange</a>
+            <a pageScroll href="#home" class="btn-top-page animation"  mat-menu-item >Nutrition challange</a>
           </li>
 
         </mat-menu>
 
         <li>
-          <a pageScroll href="#home" class="page-scroll" mat-button >Getting Started</a>
+          <a pageScroll href="#home" class="btn-top-page animation" mat-button >Getting Started</a>
         </li>
         <li>
-          <a pageScroll href="#home" class="page-scroll" mat-button >Schedules & Rates</a>
+          <a pageScroll href="#home" class="btn-top-page animation" mat-button >Schedules & Rates</a>
         </li>
         <li>
-          <a pageScroll href="#" class="page-scroll" mat-button routerLink="/kidfit" (click)="linkToOtherComponent()">KidFit</a>
+          <a pageScroll href="#" class="btn-top-page animation" mat-button routerLink="/kidfit" (click)="linkToOtherComponent()">KidFit</a>
         </li>
         <li>
-          <a pageScroll href="#team" class="page-scroll" mat-button >Contact</a>
+          <a pageScroll href="#team" class="btn-top-page animation" mat-button >Contact</a>
         </li>
 
 

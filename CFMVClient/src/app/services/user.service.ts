@@ -11,6 +11,7 @@ export class UserService {
   constructor(private httpClient: HttpClient){
 }
   addContact(contact){
+
     console.log(contact);
     return this.httpClient.post('http://localhost:8080/contactController/create', contact );
   }

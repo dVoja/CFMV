@@ -1,3 +1,53 @@
-<h1>kidfit workssadasdaad!</h1>
-<button type="button" (click)="onClick()">Add User </button>
-<button type="button" (click)="onClick()">Contact</button>
+<div class="kidfit-container">
+
+ <h2>Contact:</h2>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
+
+    <h5 *ngIf="success"> Succes </h5>
+
+    <label>First Name:
+      <input type="text" formControlName="firstName">
+      <div  *ngIf="submited && contactForm.controls.firstName.errors" class="error">
+        <div *ngIf="contactForm.controls.firstName.errors.required">Your first name is required</div>
+      </div>
+    </label>
+    <br>
+
+    <label>Last Name:
+      <input type="text" formControlName="lastName">
+      <div  *ngIf="submited && contactForm.controls.lastName.errors" class="error">
+        <div *ngIf="contactForm.controls.lastName.errors.required">Your Last name is required</div>
+      </div>
+    </label>
+    <br>
+
+    <label>Phone Number:
+      <input type="text" formControlName="phoneNumber">
+      <div  *ngIf="submited && contactForm.controls.phoneNumber.errors" class="error">
+        <div *ngIf="contactForm.controls.phoneNumber.errors.required">Your Phone number is required</div>
+      </div>
+    </label>
+    <br>
+
+    <label>E-Mail:
+      <input type="text" formControlName="email">
+      <div  *ngIf="submited && contactForm.controls.email.errors" class="error">
+        <div *ngIf="contactForm.controls.email.errors.required">Your E-Mail is required</div>
+      </div>
+    </label>
+    <br>
+
+    <label>Enter your Message:
+      <br>
+      <textarea rows="4" cols="50" formControlName="content">
+      </textarea>
+      <div *ngIf="submited && contactForm.controls.content.errors" class="error">
+        <div *ngIf="contactForm.controls.content.errors.required">A message is required</div>
+      </div>
+    </label>
+    <br>
+    <input value ="Send" type="submit" >
+  </form>
+</div>
+
