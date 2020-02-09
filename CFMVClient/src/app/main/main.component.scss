@@ -82,7 +82,7 @@ mat-toolbar  a:hover, mat-menu a:hover{
 
 .mat-sidenav-content {
   //position:absolute;
-  background: url(src/assets/images/bl.jpg) no-repeat center center fixed;
+  background: url(src/assets/images/cfbackground.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -173,24 +173,33 @@ hr {
 }
 
 #menu.navbar-default {
-  background-color: #fff;
+  background-color: rgba(0,0,0,0.70);
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
   border-color: rgba(231, 231, 231, 0);
-  box-shadow: 0 0 10px rgba(0,0,0,0.15)
+
+
+
+}
+#burger{
+  color: white;
 }
 
 #menu a.navbar-brand {
+  color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #333;
+
+
 }
 
 #menu.navbar-default .nav-pills > li > a {
+  color: white;
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
-  color: #555;
+
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 750;
   padding: 8px 2px;
   border-radius: 0;
   margin: 9px 20px 0 20px;
@@ -289,7 +298,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
   display: table;
   width: 100%;
   padding: 0;
-  background: url(src/assets/images/bl.jpg) center center no-repeat;
+  background: url(src/assets/images/cfbackground.png) center center no-repeat;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
