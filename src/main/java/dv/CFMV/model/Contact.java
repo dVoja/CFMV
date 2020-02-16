@@ -18,7 +18,7 @@ public class Contact {
     @Column(nullable = false, length = 20)
     private String lastName;
     @Column(nullable = false, length = 20)
-    private int phoneNumber;
+    private long  phoneNumber;
     @Column(nullable = false)
     private boolean deleted;
 
@@ -35,6 +35,14 @@ public class Contact {
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.deleted = deleted;
+    }
+
+    public Contact(String email, String content, String firstName, String lastName, long phoneNumber) {
+        this.email = email;
+        this.content = content;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
     }
 
     public long getId() {
@@ -77,11 +85,11 @@ public class Contact {
         this.lastName = lastName;
     }
 
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

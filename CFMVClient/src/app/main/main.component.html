@@ -102,7 +102,7 @@
 
       <ul class = "nav nav-pills navbar-right">
         <li>
-          <a pageScroll href="#home" class="btn-top-page animation" mat-button >Home</a>
+          <a pageScroll href="#meetTheTeam" class="btn-top-page animation" mat-button >Team</a>
         </li>
 
 
@@ -141,7 +141,7 @@
           <a pageScroll href="#" class="btn-top-page animation" mat-button routerLink="/kidfit" (click)="linkToOtherComponent()">KidFit</a>
         </li>
         <li>
-          <a pageScroll href="#team" class="btn-top-page animation" mat-button >Contact</a>
+          <a pageScroll href="#" class="btn-top-page animation" mat-button routerLink="/contact" (click)="linkToOtherComponent()">Contact</a>
         </li>
 
 
@@ -157,7 +157,7 @@
     <mat-nav-list>
       <a href="" mat-list-item > </a>
 
-      <a class="btn-side-menu"  href="#home" mat-list-item>Home</a>
+      <a class="btn-side-menu"  href="#meetTheTeam" mat-list-item>Team</a>
       <a class="btn-side-menu" [matMenuTriggerFor]="FAQ" routerLink="//what-is-crossfit"mat-list-item>What is CrossFit</a>
       <mat-menu #FAQ="matMenu">
         <a class="btn-side-menu" mat-menu-item routerLink="/crossfit-faq">CrossFit FAQ</a>
@@ -198,9 +198,9 @@
     </app-rates>
   </div>
 
-  <div id="contact">
-  <app-contact>
-  </app-contact>
+  <div id="meetTheTeam">
+  <app-meet-the-team>
+  </app-meet-the-team>
   </div>
 </div>
 

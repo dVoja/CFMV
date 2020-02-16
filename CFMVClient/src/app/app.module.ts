@@ -27,6 +27,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ValidationService } from './services/validation.service';
+import { MeetTheTeamComponent } from './meet-the-team/meet-the-team.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { ValidationService } from './services/validation.service';
     NutritionChallangeComponent,
     OurCoachesComponent,
     MainComponent,
+    MeetTheTeamComponent,
 
 
   ],
