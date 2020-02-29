@@ -11,6 +11,7 @@ import {WhatIsCrossfitComponent} from "./what-is-crossfit/what-is-crossfit.compo
 import {CompetitionComponent} from "./what-is-crossfit/competition/competition.component";
 import {CrossfitFaqComponent} from "./what-is-crossfit/crossfit-faq/crossfit-faq.component";
 import {NutritionComponent} from "./what-is-crossfit/nutrition/nutrition.component";
+import {WODComponent} from "./wod/wod.component";
 
 
 const routes: Routes = [
@@ -26,7 +27,7 @@ const routes: Routes = [
   {path:'competition', component: CompetitionComponent},
   {path:'crossfit-faq', component: CrossfitFaqComponent},
   {path:'nutrition', component: NutritionComponent},
-
+  {path:'wod', component: WODComponent},
 ];
 
 @NgModule({

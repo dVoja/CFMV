@@ -28,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ValidationService } from './services/validation.service';
 import { MeetTheTeamComponent } from './meet-the-team/meet-the-team.component';
+import { WODComponent } from './wod/wod.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { MeetTheTeamComponent } from './meet-the-team/meet-the-team.component';
     OurCoachesComponent,
     MainComponent,
     MeetTheTeamComponent,
+    WODComponent,
 
 
   ],

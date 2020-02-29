@@ -28,7 +28,7 @@ export class UserService {
   }
   update(contact, id){
     console.log(id);
-    return this.httpClient.get('http://localhost:8080/contactController/update/' + id, contact);
+    return this.httpClient.put('http://localhost:8080/contactController/update/' + id, contact);
   }
   findById(id) {
     console.log(id);

@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
 
 import java.util.List;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -18,6 +21,9 @@ import java.util.List;
 public class ContactController {
     @Autowired
     private ContactService contactService;
+
+    @Autowired
+    private JavaMailSender javaMailSender;
 
 
     @RequestMapping(value = "/create/{idasd}",
@@ -31,6 +37,8 @@ public class ContactController {
         }
 
         Contact  newContact = new Contact();
+
+        //Contact   email= null content = null...
         newContact.setContent(recivedContact.getContent());
         newContact.setPhoneNumber(Long.parseLong(recivedContact.getPhoneNumber()));
         newContact.setdeleted(false);
@@ -38,7 +46,18 @@ public class ContactController {
         newContact.setFirstName(recivedContact.getFirstName());
         newContact.setLastName(recivedContact.getLastName());
         Contact  retContact;
-        retContact = contactService.save(newContact); // -> Service -> ServiceImpl -> Repository(JPA) -> "inset into..." -> MySQL
+        retContact = contactService.save(newContact); // -> Service -> ServiceImpl -> Repository(JPA) -> "inset into..." -> MySQL <-
+
+        //JAVA MAIL
+        SimpleMailMessage mailMessage = new SimpleMailMessage();
+        mailMessage.setTo("cfmv2@outlook.com");
+        mailMessage.setSubject("Client Contact");
+        mailMessage.setReplyTo(recivedContact.getEmail());
+        mailMessage.setText(recivedContact.getContent());
+
+
+        javaMailSender.send(mailMessage);
+
         return new ResponseEntity(retContact, HttpStatus.OK);
     }
 // Fizicko brisanje
@@ -86,6 +105,7 @@ public class ContactController {
         newContact.setPhoneNumber(contact.getPhoneNumber());
         Contact ret = this.contactService.save(newContact);
         //Contact newwContact = new Contact(contact.getEmail(), contact.getContent(), contact.getFirstName(), contact.getLastName(), contact.getPhoneNumber());
+        //Contact   email= contact.getEmail() content = contact.getContent(),...
         return new ResponseEntity<>(ret, HttpStatus.OK);
 
     }
