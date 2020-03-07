@@ -1,69 +1,4 @@
-/*
-.mat-toolbar,mat-sidenav, mat-sidenav-content {
-  //position:absolute;
-  background: url(../assets/CFBackground.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.mat-sidenav-content{
 
-
-}
-
-
-.mat-sidenav-content{
-   margin-top: 55px;
-   //background: blueviolet;
-
-}
-.mat-sidenav-container mat-sidenav{
-
-
-}
-
-mat-toolbar  a:hover, mat-menu a:hover{
-
-  font-size: 120%;
-}
-
-
-.mat-menu-item:hover {
-  color:brown;
-  font-size: 120%;
-}
-
-.mat-toolbar{
-  position: fixed;
-  z-index: 2;
-}
-
-.btn-top-menu{
-  font-size: large;
-  font-weight: bold;
-  color: #ffecb8;
-
-}
-.btn-top-menu:hover {
-  font-size: 120%;
-  color: #ffb506;
-}
-
-.btn-side-menu{
-  background: transparent;
-  border: none;
-  color: coral;
-  backdrop-filter: brightness(25%);
-
-}
-.btn-side-menu:hover{
-  font-size: 120%;
-  color: #ffac00;
-  opacity: 20;
-
-}
-*/
 .btn-top-page:hover{
   font-size: 120% !important;
   color: #ffb506;
@@ -188,9 +123,7 @@ hr {
 
 
 }
-#burger{
-  color: white;
-}
+
 
 #menu a.navbar-brand {
   color: white;
@@ -207,7 +140,7 @@ hr {
   text-transform: uppercase;
   overflow: hidden;
   font-size: 15px;
-  font-weight: 750;
+  //font-weight: 750;
   padding: 8px 2px;
   border-radius: 0;
   margin: 9px 20px 0 20px;
@@ -224,6 +157,10 @@ hr {
   content: "";
   transition: width 0.2s;
 }
+#burger{
+  color: white;
+}
+
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   background-color: transparent;
@@ -461,5 +398,48 @@ header .intro-text {
   width:100%;
 }
 
+//NAJNOVIJI NAVIGATION BAR
+nav ul{
+  float: left;
 
+
+
+}
+nav ul li {
+
+  float: left;
+  list-style: none;
+  position: relative;
+
+
+}
+nav ul li:hover ul{
+  display: block;
+
+}
+nav ul li a {
+  padding: 14px 20px;
+  display: block;
+}
+nav ul li ul{
+  position: absolute;
+  background-color: yellow;
+  padding: 1%;
+  border-radius: 10px;
+  display: none;
+  z-index: 2;
+
+}
+
+nav ul li ul li {
+  width: 150px;
+}
+nav ul li ul li a{
+  padding: 12px 14px;
+}
+nav ul li ul li a:hover{
+  background-color: #333333;
+  font-size: 120%;
+
+}
 

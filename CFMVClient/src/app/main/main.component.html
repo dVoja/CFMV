@@ -3,92 +3,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--
-<div style="height: 80vh;">
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>CrossFit</span>
-      <span class="menu-spacer"></span>
-      <div fxShow="true" fxHide.lt-md>
-
-        <button class="btn-top-menu" mat-button routerLink="/home">Home</button>
-
-
-        <button class="btn-top-menu" mat-button routerLink="/our-coaches">Our Coaches!</button>
-
-        <button class="btn-top-menu" mat-button  [matMenuTriggerFor]="FAQ"  routerLink="/what-is-crossfit">What is CrossFit</button>
-
-        <mat-menu #FAQ="matMenu">
-          <button class="btn-top-menu"mat-menu-item routerLink="/crossfit-faq">CrossFit FAQ</button>
-          <button class="btn-top-menu" mat-menu-item [matMenuTriggerFor]="nutrition" routerLink="/nutrition">Nutrition</button>
-          <button class="btn-top-menu" mat-menu-item routerLink="/competition">Competition</button>
-
-        </mat-menu>
-
-        <mat-menu #nutrition="matMenu">
-          <button class="btn-top-menu" mat-menu-item routerLink="/nutrition-challange">Nutrition challange</button>
-        </mat-menu>
-
-        <button class="btn-top-menu" mat-button routerLink="/getting-started">Getting Started</button>
-
-
-        <button class="btn-top-menu" mat-button routerLink="/rates">Schedules & Rates</button>
-
-        <button class="btn-top-menu" mat-button routerLink="/kidfit">KidFit</button>
-
-        <button class="btn-top-menu" mat-button routerLink="/contact">Contact</button>
-
-
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
-
-
-  <mat-sidenav-container fxFlexFill>
-    <mat-sidenav #sidenav>
-      <mat-nav-list>
-        <a href="" mat-list-item > </a>
-
-        <button class="btn-side-menu"  routerLink="/home"mat-list-item>Home</button>
-
-        <button class="btn-side-menu" routerLink="/our-coaches"mat-list-item>Our Coaches!</button>
-        <button class="btn-side-menu" [matMenuTriggerFor]="FAQ" routerLink="//what-is-crossfit"mat-list-item>What is CrossFit</button>
-        <mat-menu #FAQ="matMenu">
-          <button class="btn-side-menu" mat-menu-item routerLink="/crossfit-faq">CrossFit FAQ</button>
-          <button class="btn-side-menu" mat-menu-item [matMenuTriggerFor]="nutrition" routerLink="/nutrition">Nutrition</button>
-          <button class="btn-side-menu" mat-menu-item routerLink="/competition">Competition</button>
-        </mat-menu>
-
-        <mat-menu #nutrition="matMenu">
-          <button class="btn-side-menu" mat-menu-item routerLink="/nutrition-challange">Nutrition challange</button>
-        </mat-menu>
-
-        <button class="btn-side-menu" routerLink="/getting-started"mat-list-item>Getting Started</button>
-        <button class="btn-side-menu" routerLink="/rates"mat-list-item>Schedules & Rates</button>
-        <button class="btn-side-menu" routerLink="/kidfit"mat-list-item>Kid Fit</button>
-        <button class="btn-side-menu" routerLink="/contact"mat-list-item>Contact</button>
-
-
-
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content fxFlexFill>
-
-      Main content
-
-    <app-home>
-    </app-home>
-      <app-rates>
-      </app-rates>
-
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-
-</div>
--->
-
 <nav id="menu" class="navbar navbar-default fixed-top">
   <div class = "container">
     <div class = "navbar-header">
@@ -150,7 +64,56 @@
     </div>
   </div>
 </nav>
+ -->
 
+<nav   class="navbar navbar-default fixed-top">
+  <div class="container" >
+
+    <div class = "navbar-header">
+      <a pageScroll class="navbar-brand page-scroll"  href="#page-top">CFMV</a>
+    </div>
+    <button id="burger" mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="topnav" id ="myTopnav" fxShow="true" fxHide.lt-md>
+
+        <ul  class = "nav nav-pills navbar-right">
+          <li>
+          <a  href="#meetTheTeam" class="btn-top-page animation">Team</a>
+          </li>
+          <li><a href="" routerLink="/contact" (click)="linkToOtherComponent()">Contact</a>
+            <!--
+            <ul>
+              <li> <a href="#project" routerLink="/contact"> Contact</a> </li>
+            </ul>
+           -->
+          </li>
+
+         <!-- <li><a href="#team" routerLink="/team">TEAM</a>
+
+            <ul>
+              <li> <a href="http://www.google.com">Team Edg</a></li>
+
+              <li> <a href="#team" routerLink="/teamwt">Team WT</a></li>
+            </ul>
+
+          </li>
+         -->
+          <li><a href="#project" routerLink="/project">CrossFit FAQ</a>
+            <ul>
+              <li> <a href="#project" routerLink="/project1"> What is CrossFit</a> </li>
+              <li> <a href="#project" routerLink="/project2"> Nutrition</a> </li>
+              <li> <a href="#project" routerLink="/project3"> Competition</a> </li>
+            </ul>
+          </li>
+          <li><a href="#register" routerLink="/wod" (click)="linkToOtherComponent()">WOD</a></li>
+          <li><a href="#register" routerLink="/rates" (click)="linkToOtherComponent()">Schedules & Rates </a></li>
+
+        </ul>
+
+    </div >
+  </div>
+</nav>
 
 <mat-sidenav-container fxFlexFill>
   <mat-sidenav #sidenav>

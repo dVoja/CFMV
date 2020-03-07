@@ -29,6 +29,7 @@ import { RouterModule } from '@angular/router';
 import { ValidationService } from './services/validation.service';
 import { MeetTheTeamComponent } from './meet-the-team/meet-the-team.component';
 import { WODComponent } from './wod/wod.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { WODComponent } from './wod/wod.component';
     MainComponent,
     MeetTheTeamComponent,
     WODComponent,
+    NavbarComponent,
 
 
   ],

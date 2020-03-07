@@ -1,0 +1,61 @@
+<nav id="menu" class="navbar navbar-default fixed-top">
+  <div class = "container">
+    <div class = "navbar-header">
+      <a pageScroll class="navbar-brand page-scroll"  href="#page-top">CFMV</a>
+    </div>
+    <button id="burger" mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <div fxShow="true" fxHide.lt-md>
+
+      <ul class = "nav nav-pills navbar-right">
+        <li>
+          <a pageScroll href="#meetTheTeam" class="btn-top-page animation" mat-button >Team</a>
+        </li>
+
+
+        <li>
+          <a pageScroll href="#home" class="btn-top-page animation " [matMenuTriggerFor]="FAQ" mat-button >CrossFit FAQ</a>
+        </li>
+
+        <mat-menu #FAQ="matMenu">
+          <li>
+            <a pageScroll href="#home" class="btn-top-page animation" mat-menu-item >>What is CrossFit</a>
+          </li>
+          <li>
+            <a pageScroll href="#home" class="btn-top-page animation" [matMenuTriggerFor]="nutrition" mat-menu-item >Nutrition</a>
+          </li>
+          <li>
+            <a pageScroll href="#home" class="btn-top-page animation"  mat-menu-item >Competition</a>
+          </li>
+
+        </mat-menu>
+
+
+        <mat-menu #nutrition="matMenu">
+          <li>
+            <a pageScroll href="#home" class="btn-top-page animation"  mat-menu-item >Nutrition challange</a>
+          </li>
+
+        </mat-menu>
+
+        <li>
+          <a pageScroll href="#home" class="btn-top-page animation" mat-button >Getting Started</a>
+        </li>
+        <li>
+          <a pageScroll href="#home" class="btn-top-page animation" mat-button >Schedules & Rates</a>
+        </li>
+        <li>
+          <a pageScroll href="#" class="btn-top-page animation" mat-button routerLink="/wod" (click)="linkToOtherComponent()">KidFit</a>
+        </li>
+        <li>
+          <a pageScroll href="#" class="btn-top-page animation" mat-button routerLink="/contact" (click)="linkToOtherComponent()">Contact</a>
+        </li>
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>

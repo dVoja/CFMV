@@ -6,7 +6,7 @@ import {MatSidenav} from "@angular/material/sidenav";
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent  implements OnInit {
 
   mainContent : boolean; //true = main page
   constructor() {
