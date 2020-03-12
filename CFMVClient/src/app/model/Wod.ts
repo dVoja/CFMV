@@ -5,6 +5,7 @@ export class Wod {
   public date: string;
   public index: number;
   public day: string;
+  public path: string;
 
 
   constructor() {

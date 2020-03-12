@@ -20,3 +20,22 @@
   height: 8em;
   margin: 1rem 1rem 1rem 1rem;
 }
+
+.gallery{
+  margin: 5px;
+  border: 1px solid #ccc;
+  margin: auto;
+  width: 180px;
+
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+  transform: scale(2.5);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+

@@ -10,9 +10,10 @@ export class WodService {
 
   findByDate(date: string) {
     console.log('Service .. ' + date)
-    return this.httpClient.get('http://localhost:8080/wodController/findByDate/123');
-  }
- // wodController/findByDate/12.12.2020.1
+   // date = "7-3-2020";
+    return this.httpClient.get('http://localhost:8080/wodController/findByDate/'+ date);
+
+  } // wodController/findByDate/12.12.2020.1
 
 
 

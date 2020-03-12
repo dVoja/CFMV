@@ -5,10 +5,11 @@
 </div>
   <br/>
   <div class = "infobox" >
-  <h4>Day: {{wodTemp.day}}</h4>
-  <h4>Date: {{wodTemp.date}}</h4>
-  <h4>Index: {{wodTemp.index}}</h4>
-  <h4>Text: {{wodTemp.text}}</h4>
+  <h4>{{wodTemp.day}}</h4>
+  <h4>{{wodTemp.date}}</h4>
+  <h4>{{wodTemp.index}}</h4>
+    <div class = "wodText" [innerHTML]="wodTemp.text">
+    </div>
   </div>
 </div>
 <br/>
@@ -18,5 +19,11 @@
   <button type="button" (click) ="yydayDateBtn(getYydayDate())" class="btn btn-outline-primary">{{getYydayDate()}}</button>
   <button type="button" (click) ="ydayDateBtn(getYdayDate())" class="btn btn-outline-primary">{{getYdayDate()}}</button>
   <button type="button" (click) = "todayDateBtn(getDate())"class="btn btn-outline-primary">{{getDate()}}</button>
+</div>
+
+
+<div class = "gallery">
+  <img src="{{wodTemp.path}}">
+
 </div>
 

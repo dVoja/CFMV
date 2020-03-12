@@ -14,6 +14,7 @@ export class WODComponent implements OnInit {
     private tempDate : string;
     private tempDay: string;
     private days = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    private dataTemp: any;
 
     constructor(private wodService: WodService) {
       this.wodTemp = new Wod();//null 1 23
@@ -22,50 +23,61 @@ export class WODComponent implements OnInit {
   ngOnInit() {
       //service -> data
 
+
     this.tempDate = this.getDate();
-    this.wodTemp.day = this.days [this.getDay()];
-    this.wodTemp.index = 2;
-    this.wodTemp.text = "asds";
-    this.wodTemp.date = this.tempDate;
 
-
-    //samo datum 12/12/2020 GM as
+    //samo datum 12-12-2020 GM as
     //pre
     //this.wodService.findByvedDate()
-    this.wodService.findByDate("123").subscribe((data:any) => {
+    this.wodService.findByDate( this.tempDate).subscribe((data:any) => {
       console.log(data);
+      this.dataTemp = data;
+      this.wodTemp.index = this.dataTemp.indeks;
+      this.wodTemp.text = this.dataTemp.tekst;
+      this.wodTemp.day = this.days [this.getDay()];
+      this.wodTemp.date = this.tempDate;
+      this.wodTemp.path = this.dataTemp.path;
     });
+
+
     }
 
   yydayDateBtn(yydayDate){
     this.wodService.findByDate(yydayDate).subscribe((data:any) => {
       console.log(data);
+
+      this.wodTemp.day = this.days [this.getDay()-2];
+      this.wodTemp.index = data.indeks;
+      this.wodTemp.text = data.tekst;
+      this.wodTemp.date = yydayDate;
+      this.wodTemp.path = data.path;
     });
-    this.wodTemp.day = this.days [this.getDay()];
-    this.wodTemp.index = 2;
-    this.wodTemp.text = "asds";
-    this.wodTemp.date = yydayDate;
+
 
   }
 
   ydayDateBtn(ydayDate){
     this.wodService.findByDate(ydayDate).subscribe((data:any) => {
       console.log(data);
+      this.wodTemp.day = this.days [this.getDay()-1];
+      this.wodTemp.index = data.indeks;
+      this.wodTemp.text = data.tekst;
+      this.wodTemp.date = ydayDate;
+      this.wodTemp.path = data.path;
     });
-    this.wodTemp.day = this.days [this.getDay()];
-    this.wodTemp.index = 2;
-    this.wodTemp.text = "qrwrqwrrqw";
-    this.wodTemp.date = ydayDate;
+
   }
 
   todayDateBtn( todaysDate){
     this.wodService.findByDate(todaysDate).subscribe((data:any) => {
       console.log(data);
+      this.wodTemp.day = this.days [this.getDay()];
+      this.wodTemp.index = data.indeks;
+      this.wodTemp.text = data.tekst;
+      this.wodTemp.date = todaysDate;
+      this.wodTemp.path = data.path;
     });
-    this.wodTemp.day = this.days [this.getDay()];
-    this.wodTemp.index = 2;
-    this.wodTemp.text = "dasdasd";
-    this.wodTemp.date = todaysDate;
+
   }
 
 
@@ -76,7 +88,7 @@ export class WODComponent implements OnInit {
     let month = d.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
     let year = d.getFullYear();
 
-    let dateStr = date + "/" + month + "/" + year;
+    let dateStr = date + "-" + month + "-" + year;
     console.log(dateStr);
     return dateStr;
   }
@@ -96,7 +108,7 @@ export class WODComponent implements OnInit {
     let month = dte.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
     let year = dte.getFullYear();
 
-    returndte = date + "/" + month + "/" + year;
+    returndte = date + "-" + month + "-" + year;
     return returndte;
   }
 
@@ -109,7 +121,7 @@ export class WODComponent implements OnInit {
     let month = yydte.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
     let year = yydte.getFullYear();
 
-    returnyydte = date + "/" + month + "/" + year;
+    returnyydte = date + "-" + month + "-" + year;
     return returnyydte;
 
   }
